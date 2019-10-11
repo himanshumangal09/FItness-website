@@ -5,7 +5,6 @@ import FitnessVideos from "./FitnessVideos";
 import FoodDetails from "./FoodDetailsWhenCalled";
 import UserDetails from './UserDetails';
 class PlanShow extends React.Component {
-
 	componentDidMount() {
 		this.props.fetchplan(this.props.match.params.id);
 	}
