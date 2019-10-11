@@ -38,7 +38,7 @@ class PlanShow extends React.Component {
 			<div>
 			<UserDetails data={this.props.plan}/>
 			<FitnessVideos/>
-			<FoodDetails ata={this.state.inputvalueforfooddetailsFoodDetails>
+			<FoodDetails ata={this.state.inputvalueforfooddetailsodDetails>
 			</div>
 		);
 	}
