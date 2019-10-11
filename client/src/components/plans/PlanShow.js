@@ -24,7 +24,7 @@ class PlanShow extends React.Component {
 		);
 	}
 	render() {
-		if (!this.props.pla) {
+		if (!thi) {
 			return <div>Loading</div>;
 		}
 		return (
