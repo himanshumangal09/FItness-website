@@ -4,7 +4,7 @@ import { fetchplan } from "../../actions/index";
 import FitnessVideos from "./FitnessVideos";
 import FoodDetails from "./FoodDetailsWhenCalled";
 const bodyMassIndex = require("body-mass-index");
-const axios = require("axios");
+
 class PlanShow extends React.Component {
 	state = {
 		inputfoodvalue: null,
