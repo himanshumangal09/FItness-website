@@ -7,6 +7,7 @@ import UserDetails from "./UserDetails";
 const bodyMassIndex = require("body-mass-index");
 const axios = require("axios");
 class PlanShow extends React.Component {
+
 	componentDidMount() {
 		this.props.fetchplan(this.props.match.params.id);
 	
