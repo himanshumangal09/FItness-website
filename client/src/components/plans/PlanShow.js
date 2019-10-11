@@ -24,13 +24,13 @@ class PlanShow extends React.Component {
 	componentDidMount() {
 		this.props.fetchplan(this.props.match.params.id);
 	}
-	// componentDidUpdate() {
-	// 	this.getUserDetails();
-	// }
-	// 	renderErrors() {
-	// 		console.log("Null value or click again");
-	// 	}
-	// 	getUserDetails() {
+	componentDidUpdate() {
+		this.getUserDetails();
+	}
+		renderErrors() {
+			console.log("Null value or click again");
+		}
+		getUserDetails() {
 			if (!this.props.plan) {
 				return <div>Loading</div>;
 			}
