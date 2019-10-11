@@ -123,8 +123,8 @@ class PlanShow extends React.Component {
 	/ 	}
 	/ 	renderDetails() {
 	// 		return (
-	/ 			<div className='ui segments'>
-	// 				<div className='ui segment'>
+	 			<div className='ui segments'>
+	/ 				<div className='ui segment'>
 	 					<p>Plan:{this.state.Plan}</p>
 	 				</div>
 	 				<div className='ui red segment'>
