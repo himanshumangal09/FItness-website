@@ -187,24 +187,7 @@ class PlanShow extends React.Component {
 		}
 		return (
 			<div className='orm'>
-				{/* <div className='field'>
-					<label className='ui  text'>
-						Place for Exercise (inside or outside)
-					</label>
-					<input style={{ width: 900 }} type='text' id='input2'></input>
-				</div>
-				<button
-					className='ui  button primary'
-					onClick={() => {
-						this.setState({
-							inputfoodvalue: document.getElementById("input").value,
-							placeForExercise:
-								document.getElementById("input2").value || "inside"
-						});
-					}}
-				>
-					Submit
-				</button> } */}
+
 				<FoodDetails data={this.state.inputvalueforfooddetails} />
 			</div>
 		);
