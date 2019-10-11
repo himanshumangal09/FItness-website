@@ -120,7 +120,7 @@ class PlanShow extends React.Component {
 	 				}
 	/ 			}
 	/ 		}
-	/ 	}
+	 	}
 	/ 	renderDetails() {
 	/ 		return (
 	 			<div className='ui segments'>
