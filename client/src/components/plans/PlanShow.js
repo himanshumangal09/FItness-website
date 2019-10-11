@@ -40,5 +40,4 @@ const mapStateToProps = (state, ownProps) => {
 		plan: state.plans[ownProps.match.params.id]
 	};
 };
-export default connect(
-)(PlanShow);
+export default connect()(PlanShow);
