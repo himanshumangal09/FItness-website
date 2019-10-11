@@ -37,7 +37,7 @@ class PlanShow extends React.Component {
 		return (			
 			<div>
 			<UserDetails data={this.props.plan}/>
-			<FitnessVideos/FitnessVideos>
+			<FitnessVideos/itnessVideos>
 			</div>
 		);
 	}
