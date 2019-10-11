@@ -30,60 +30,6 @@ class PlanShow extends React.Component {
 	// 	renderErrors() {
 	// 		console.log("Null value or click again");
 	// 	}
-	// 	getFoodDetails() {
-	// 		axios({
-	// 			method: "GET",
-	// 			url: "https://food-calorie-data-search.p.rapidapi.com/api/search",
-	// 			headers: {
-	// 				"content-type": "application/octet-stream",
-	// 				"x-rapidapi-host": "food-calorie-data-search.p.rapidapi.com",
-	// 				"x-rapidapi-key": "4fce675d58msh4c5b8d7782ff444p1f819fjsn503f83c9b052"
-	// 			},
-	// 			params: {
-	// 				keyword: `${this.state.inputfoodvalue}`
-	// 			}
-	// 		})
-	// 			.then(response => {
-	// 				console.log(this.state.inputfoodvalue);
-	// 				console.log(response.data[0]);
-	// 				if (
-	// 					response.data == [] ||
-	// 					response.data == undefined ||
-	// 					response.data == null
-	// 				) {
-	// 					return alert("NO DATA LOADED YET!!");
-	// 				}
-	// 				{
-	// 					this.setState({
-	// 						calcium: response.data[0].calcium,
-	// 						carbohydrt: response.data[0].carbohydrt,
-	// 						cholestrl: response.data[0].cholestrl,
-	// 						energ_kcal: response.data[0].energ_kcal,
-	// 						iron: response.data[0].iron,
-	// 						magnesium: response.data[0].magnesium,
-	// 						manganese: response.data[0].manganese,
-	// 						phosphorus: response.data[0].phosphorus,
-	// 						potassium: response.data[0].potassium,
-	// 						protein: response.data[0].protein,
-	// 						sodium: response.data[0].sodium,
-	// 						vit_b6: response.data[0].vit_b6,
-	// 						vit_b12: response.data[0].vit_b12,
-	// 						vit_c: response.data[0].vit_c,
-	// 						vit_d: response.data[0].vit_d,
-	// 						vit_e: response.data[0].vit_e,
-	// 						vit_k: response.data[0].vit_k,
-	// 						vit_a_iu: response.data[0].vit_a_iu,
-	// 						water: response.data[0].water
-	// 					});
-	// 				}
-	// 			})
-	// 			.catch(error => {
-	// 				console.log("error occuried try again by clicking the button again ");
-	// 				{
-	// 					this.renderErrors();
-	// 				}
-	// 			});
-	// 	}
 	// 	getUserDetails() {
 	// 		if (!this.props.plan) {
 	// 			return <div>Loading</div>;
