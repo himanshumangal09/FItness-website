@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { fetchplan } from "../../actions/index";
 import FitnessVideos from "./FitnessVideos";
 import FoodDetails from "./FoodDetailsWhenCalled";
-import UserDetails from './U'
+import UserDetails from './UserDetails'
 class PlanShow extends React.Component {
 	state = {
 		inputfoodvalue: null,
