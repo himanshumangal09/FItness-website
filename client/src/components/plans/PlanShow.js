@@ -10,7 +10,7 @@ class PlanShow extends React.Component {
 	};
 	componentDidMount() {
 		this.props.fetchplan(this.props.match.params.id);
-	
+
 	}
 	helpplease = () => {
 		if (document.getElementById("inputvalueforfooddetails").value != null) {
