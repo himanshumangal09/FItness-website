@@ -23,12 +23,7 @@ class PlanShow extends React.Component {
 	componentDidMount() {
 		this.props.fetchplan(this.props.match.params.id);
 	}
-	componentDidUpdate() {
-		this.getUserDetails();
-	}
-		renderErrors() {
-			console.log("Null value or click again");
-		}
+
 	helpplease = () => {
 		if (document.getElementById("inputvalueforfooddetails").value != null) {
 			this.setState({
