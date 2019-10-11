@@ -35,5 +35,4 @@ class PlanShow extends React.Component {
 		);
 	}
 }
-
 export default PlanShow;
