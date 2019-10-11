@@ -29,7 +29,6 @@ class PlanShow extends React.Component {
 		renderErrors() {
 			console.log("Null value or click again");
 		}
-
 	helpplease = () => {
 		if (document.getElementById("inputvalueforfooddetails").value != null) {
 			this.setState({
