@@ -161,7 +161,7 @@ class PlanShow extends React.Component {
 	// 					</p>
 	// 				</div>
 	// 			</div>
-	// 		);
+	/ 		);
 	 	}
 	helpplease = () => {
 		if (document.getElementById("inputvalueforfooddetails").value != null) {
