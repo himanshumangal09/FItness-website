@@ -119,7 +119,7 @@ class PlanShow extends React.Component {
 	/ 					this.setState({ diseaseRisk: "Extreme High" });
 	 				}
 	 			}
-	/ 		}
+	 		}
 	 	}
 	/ 	renderDetails() {
 	/ 		return (
