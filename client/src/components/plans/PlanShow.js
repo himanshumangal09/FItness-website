@@ -126,9 +126,9 @@ class PlanShow extends React.Component {
 	/ 			<div className='ui segments'>
 	// 				<div className='ui segment'>
 	 					<p>Plan:{this.state.Plan}</p>
-	/ 				</div>
-	/ 				<div className='ui red segment'>
-	/ 					<p>Name:{this.state.Name}</p>
+	 				</div>
+	 				<div className='ui red segment'>
+	 					<p>Name:{this.state.Name}</p>
 	 				</div>
 	 				<div className='ui blue segment'> 					<p>Age(in yrs):{this.state.Age}</p>
 / 				</div>
