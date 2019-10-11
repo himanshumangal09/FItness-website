@@ -117,8 +117,8 @@ class PlanShow extends React.Component {
 	// 					(this.state.Sex == "f" && this.state.waist <= 35)
 	// 				) {
 	// 					this.setState({ diseaseRisk: "Extreme High" });
-	// 				}
-	// 			}
+	/ 				}
+	/ 			}
 	/ 		}
 	/ 	}
 	/ 	renderDetails() {
