@@ -24,7 +24,6 @@ class PlanShow extends React.Component {
 		);
 	}
 	render() {
-		
 		return (
 			<div className='ui form'>
 				<UserDetails/>
