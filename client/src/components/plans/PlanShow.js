@@ -121,7 +121,7 @@ class PlanShow extends React.Component {
 	 			}
 	 		}
 	 	}
-	/ 	renderDetails() {
+	 	renderDetails() {
 	/ 		return (
 	 			<div className='ui segments'>
 	/ 				<div className='ui segment'>
