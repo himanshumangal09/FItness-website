@@ -160,7 +160,7 @@ class PlanShow extends React.Component {
 	// 						{this.state.diseaseRisk}
 	// 					</p>
 	// 				</div>
-// 			</div>
+ 			</div>
 	 		);
 	 	}
 	helpplease = () => {
