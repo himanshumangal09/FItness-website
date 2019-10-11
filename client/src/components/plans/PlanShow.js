@@ -28,7 +28,7 @@ class PlanShow extends React.Component {
 	// }
 	render() {
 		return (
-			<div c
+			<div
 				<UserDetails/>
 				{/* <FoodDetails data={this.state.inputvalueforfooddetails} /> */}
 		);
