@@ -14,24 +14,24 @@ class PlanShow extends React.Component {
 		this.props.fetchplan(this.props.match.params.id);
 	
 	}
-	// helpplease = () => {
-	// 	if (document.getElementById("inputvalueforfooddetails").value != null) {
-	// 		this.setState({
-	// 			inputvalueforfooddetails: document.getElementById(
-	// 				"inputvalueforfooddetails"
-	// 			).value
-	// 		});
-	// 	}
-	// };
-	// renderHelper() {
-	// 	return (
-	// 		<div>
-	// 			<label>Food Details</label>
-	// 			<input type='text' id='inputvalueforfooddetails'></input>
-	// 			<button onClick={this.helpplease}>submit</button>
-	// 		</div>
-	// 	);
-	// }
+	helpplease = () => {
+		if (document.getElementById("inputvalueforfooddetails").value != null) {
+			this.setState({
+				inputvalueforfooddetails: document.getElementById(
+					"inputvalueforfooddetails"
+				).value
+			});
+		}
+	};
+	renderHelper() {
+		return (
+			<div>
+				<label>Food Details</label>
+				<input type='text' id='inputvalueforfooddetails'></input>
+				<button onClick={this.helpplease}>submit</button>
+			</div>
+		);
+	}
 	render() {
 		if (!this.props.plan) {
 			return <div>Loading</div>;
