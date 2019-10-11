@@ -154,7 +154,7 @@ class PlanShow extends React.Component {
 	// 				<div className='ui blue segment'>
 	// 					<p>According to BMI: {this.state.typeOfPerson}</p>
 	// 				</div>
-	// 				<div className='ui blue segment'>
+	/ 				<div className='ui blue segment'>
 	 					<p>
  						Disease Risk (like type 2 diabetes,hypertension,CVD):{" "}
 					{this.state.diseaseRisk}
