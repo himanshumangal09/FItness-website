@@ -312,7 +312,7 @@ class PlanShow extends React.Component {
 			return <div>Loading</div>;
 		}
 		return (
-			<div className=' form'>
+			<div className='orm'>
 				{/* <div className='field'>
 					<label className='ui text'>
 						Place for Exercise (inside or outside)
