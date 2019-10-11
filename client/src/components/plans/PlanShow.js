@@ -5,9 +5,9 @@ import FitnessVideos from "./FitnessVideos";
 import FoodDetails from "./FoodDetailsWhenCalled";
 import UserDetails from './UserDetails';
 class PlanShow extends React.Component {
-	state={
-		inputvalueforfooddetails:''
-	}
+	// state={
+	// 	inputvalueforfooddetails:''
+	// }
 	// helpplease = () => {
 	// 	if (document.getElementById("inputvalueforfooddetails").value != null) {
 	// 		this.setState({
