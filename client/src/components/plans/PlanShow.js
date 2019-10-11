@@ -62,12 +62,12 @@ class PlanShow extends React.Component {
 	// 			if (bmi > 25.0 && bmi < 29.9) {
 	// 				this.setState({ typeOfPerson: "Overweight" });
 	// 				if (
-	// 					(this.state.Sex == "m" && this.state.waist <= 40) ||
-	// 					(this.state.Sex == "f" && this.state.waist <= 35)
-	// 				) {
-	// 					this.setState({ diseaseRisk: "Increased" });
-	// 				}
-	// 				if (
+						(this.state.Sex == "m" && this.state.waist <= 40) ||
+						(this.state.Sex == "f" && this.state.waist <= 35)
+					) {
+						this.setState({ diseaseRisk: "Increased" });
+					}
+					if (
 	 					(this.state.Sex == "m" && this.state.waist >= 40) ||
 	 					(this.state.Sex == "f" && this.state.waist >= 35)
 					) {
