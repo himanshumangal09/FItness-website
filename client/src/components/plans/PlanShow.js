@@ -16,7 +16,7 @@ class PlanShow extends React.Component {
 	// 	Height: 0,
 	// 	Name: 0,
 	// 	Sex: 0,
-	// 	Plan : 0,
+	// 	Plan  : 0,
 	// 	waist: 0,
 	// 	hip: 0,
 	// 	typeOfPerson: 0 ,
