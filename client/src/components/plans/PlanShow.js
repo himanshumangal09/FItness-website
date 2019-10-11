@@ -103,7 +103,7 @@ class PlanShow extends React.Component {
 	// 				) {
 	 					this.setState({ diseaseRisk: "very high" });
 	/ 				}
-	/ 			}
+	 			}
 	/ 			if (bmi > 40) {
 	 				this.setState({ typeOfPerson: "Extreme Obesity" });
 	 				if (
