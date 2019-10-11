@@ -317,7 +317,7 @@ class PlanShow extends React.Component {
 					<label className='ui   text'>
 						Place for Exercise (inside or outside)
 					</label>
-					<input style={{ width: 900 }} type='tex t' id='input2'></input>
+					<input style={{ width: 900 }} type='text' id='input2'></input>
 				</div>
 				<button
 					className='ui  button primary'
