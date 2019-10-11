@@ -120,46 +120,7 @@ class PlanShow extends React.Component {
 	 			}
 	 		}
 	 	}
-	 	renderDetails() {
-	 		return (
-	 			<div className='ui segments'>
-	 				<div className='ui segment'>
-	 					<p>Plan:{this.state.Plan}</p>
-	 				</div>
-	 				<div className='ui red segment'>
-	 					<p>Name:{this.state.Name}</p>
-	 				</div>
-	 				<div className='ui blue segment'> 					<p>Age(in yrs):{this.state.Age}</p>
- 				</div>
-	 				<div className='ui green segment'>					<p>Weight(in KG):{this.state.Weight}</p>
-	 				</div>
-	 				<div className='ui yellow segment'>
-	 					<p> Height(in cm):{this.state.Height}</p>
-	 				</div>
-	 				<div className='ui yellow segment'>
-	 					<p> Waist(in cm): {this.state.waist}</p>
-	 				</div>
-	 				<div className='ui yellow segment'>
-						<p>Hip(in cm):{this.state.hip}</p>
-	 				</div>
-					<div className='ui yellow segment'>
-	 					<p>gender: {this.state.Sex}</p>
-	 				</div>
-	 				<div className='ui blue segment'>
-	 					<p>BMI: {this.state.bmi}</p>
-	 				</div>
- 				<div className='ui blue segment'>
-					<p>According to BMI: {this.state.typeOfPerson}</p>
-	 				</div>
-	 				<div className='ui blue segment'>
-	 					<p>
- 						Disease Risk (like type 2 diabetes,hypertension,CVD):{" "}
-					{this.state.diseaseRisk}
-	 					</p>
-			</div>
- 			</div>
-	 		);
-	 	}
+
 	helpplease = () => {
 		if (document.getElementById("inputvalueforfooddetails").value != null) {
 			this.setState({
