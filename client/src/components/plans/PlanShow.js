@@ -141,7 +141,7 @@ class PlanShow extends React.Component {
 	// 				</div>
 	// 				<div className='ui yellow segment'>
 	 					<p> Waist(in cm): {this.state.waist}</p>
-	/ 				</div>
+	 				</div>
 	 				<div className='ui yellow segment'>
 						<p>Hip(in cm):{this.state.hip}</p>
 	 				</div>
