@@ -3,7 +3,6 @@ import { connect } from "react-redux";
 import { fetchplan } from "../../actions/index";
 import FitnessVideos from "./FitnessVideos";
 import FoodDetails from "./FoodDetailsWhenCalled";
-const bodyMassIndex = require("body-mass-index");
 class PlanShow extends React.Component {
 	state = {
 		inputfoodvalue: null,
