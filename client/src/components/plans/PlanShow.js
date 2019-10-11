@@ -31,7 +31,6 @@ class PlanShow extends React.Component {
 			<div className='ui form'>
 				<UserDetails/>
 				{/* <FoodDetails data={this.state.inputvalueforfooddetails} /> */}
-
 		);
 	}
 }
