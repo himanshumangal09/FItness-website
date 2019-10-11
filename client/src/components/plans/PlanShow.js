@@ -24,7 +24,7 @@ class PlanShow extends React.Component {
 		);
 	}
 	render() {
-		if (!th) {
+		if (!) {
 			return <div>Loading</div>;
 		}
 		return (
