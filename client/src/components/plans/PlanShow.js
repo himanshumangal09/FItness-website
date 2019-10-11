@@ -183,7 +183,7 @@ class PlanShow extends React.Component {
 			return <div>Loading</div>;
 		}
 		return (
-			<div className='ui orm'>
+			<div className='ui form'>
 				<FoodDetails data={this.state.inputvalueforfooddetails} />
 			</div>
 		);
