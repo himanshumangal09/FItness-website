@@ -7,9 +7,9 @@ import UserDetails from "./UserDetails";
 const bodyMassIndex = require("body-mass-index");
 const axios = require("axios");
 class PlanShow extends React.Component {
-	// state = {
-	// 	inputvalueforfooddetails: null
-	// };
+	state = {
+		inputvalueforfooddetails: null
+	};
 	componentDidMount() {
 		this.props.fetchplan(this.props.match.params.id);
 	
