@@ -35,9 +35,5 @@ class PlanShow extends React.Component {
 		);
 	}
 }
-const mapStateToProps = (state, ownProps) => {
-	return {
-		plan: state.plans[ownProps.match.params.id]
-	};
-};
+
 export default PlanShow;
