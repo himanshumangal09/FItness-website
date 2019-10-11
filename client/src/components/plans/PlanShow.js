@@ -8,7 +8,7 @@ const bodyMassIndex = require("body-mass-index");
 const axios = require("axios");
 class PlanShow extends React.Component {
 	// state = {
-	// 	inputfoodvalue: null,
+	// 	inputfoodvalue: null
 	// 	inputvalueforfooddetails: null
 	// };
 	componentDidMount() {
