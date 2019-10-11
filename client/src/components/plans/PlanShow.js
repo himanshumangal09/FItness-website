@@ -31,37 +31,37 @@ class PlanShow extends React.Component {
 	// 		console.log("Null value or click again");
 	// 	}
 	// 	getUserDetails() {
-	// 		if (!this.props.plan) {
-	// 			return <div>Loading</div>;
-	// 		}
-	// 		this.setState({
-	// 			Plan: this.props.plan.Plan,
-	// 			Age: this.props.plan.Age,
-	// 			Weight: this.props.plan.Weight,
-	// 			Height: this.props.plan.Height,
-	// 			Name: this.props.plan.Name,
-	// 			Sex: this.props.plan.Sex,
-	// 			waist: this.props.plan.waist,
-	// 			hip: this.props.plan.hip
-	// 		});
+			if (!this.props.plan) {
+				return <div>Loading</div>;
+			}
+			this.setState({
+				Plan: this.props.plan.Plan,
+				Age: this.props.plan.Age,
+				Weight: this.props.plan.Weight,
+				Height: this.props.plan.Height,
+				Name: this.props.plan.Name,
+				Sex: this.props.plan.Sex,
+				waist: this.props.plan.waist,
+				hip: this.props.plan.hip
+			});
 
-	// 		{
-	// 			const bmi = bodyMassIndex(
-	// 				`${this.state.Weight} kg`,
-	// 				`${this.state.Height} cm`
-	// 			);
+			{
+				const bmi = bodyMassIndex(
+					`${this.state.Weight} kg`,
+					`${this.state.Height} cm`
+				);
 
-	// 			if (bmi < 18.5) {
-	// 				this.setState({ typeOfPerson: "Underweight" });
-	// 				this.setState({ diseaseRisk: "No Risk " });
-	// 			}
-	// 			if (bmi > 18.5 && bmi < 24.9) {
-	// 				this.setState({ typeOfPerson: "Normal" });
-	// 				this.setState({ diseaseRisk: "No Risk" });
-	// 			}
-	// 			if (bmi > 25.0 && bmi < 29.9) {
-	// 				this.setState({ typeOfPerson: "Overweight" });
-	// 				if (
+				if (bmi < 18.5) {
+					this.setState({ typeOfPerson: "Underweight" });
+					this.setState({ diseaseRisk: "No Risk " });
+				}
+				if (bmi > 18.5 && bmi < 24.9) {
+					this.setState({ typeOfPerson: "Normal" });
+					this.setState({ diseaseRisk: "No Risk" });
+				}
+				if (bmi > 25.0 && bmi < 29.9) {
+					this.setState({ typeOfPerson: "Overweight" });
+					if (
 						(this.state.Sex == "m" && this.state.waist <= 40) ||
 						(this.state.Sex == "f" && this.state.waist <= 35)
 					) {
