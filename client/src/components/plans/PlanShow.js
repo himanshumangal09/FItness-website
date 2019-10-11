@@ -159,7 +159,7 @@ class PlanShow extends React.Component {
 	// 						Disease Risk (like type 2 diabetes,hypertension,CVD):{" "}
 	// 						{this.state.diseaseRisk}
 	 					</p>
-/			</div>
+			</div>
  			</div>
 	 		);
 	 	}
