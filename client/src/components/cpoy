@@ -1,0 +1,376 @@
+import React from "react";
+import SearchBar from "./SearchBar";
+import VideoList from "./VideoList";
+import VideoDetails from "./VideoDetails";
+import { connect } from "react-redux";
+import { fetchplan } from "../../actions/index";
+const bodyMassIndex = require("body-mass-index");
+const axios = require("axios");
+class PlanShow extends React.Component {
+	state = {
+		inputfoodvalue: null,
+		calcium: 0,
+		carbohydrt: 0,
+		cholestrl: 0,
+		energ_kcal: 0,
+		iron: 0,
+		magnesium: 0,
+		manganese: 0,
+		phosphorus: 0,
+		potassium: 0,
+		protein: 0,
+		sodium: 0,
+		vit_b6: 0,
+		vit_b12: 0,
+		vit_c: 0,
+		vit_d: 0,
+		vit_e: 0,
+		vit_k: 0,
+		vit_a_iu: 0,
+		water: 0,
+		bmi: 0,
+		videos: [],
+		selectedVideo: null
+	};
+	componentDidMount() {
+		this.props.fetchplan(this.props.match.params.id);
+		this.onTermSubmit("Benefits of exercise regular");
+	}
+	renderErrors() {
+		console.log("Null value or click again");
+	}
+	getFoodDetails() {
+		axios({
+			method: "GET",
+			url: "https://food-calorie-data-search.p.rapidapi.com/api/search",
+			headers: {
+				"content-type": "application/octet-stream",
+				"x-rapidapi-host": "food-calorie-data-search.p.rapidapi.com",
+				"x-rapidapi-key": "4fce675d58msh4c5b8d7782ff444p1f819fjsn503f83c9b052"
+			},
+			params: {
+				keyword: `${this.state.inputfoodvalue}`
+			}
+		})
+			.then(response => {
+				console.log(this.state.inputfoodvalue);
+				console.log(response.data[0]);
+				if (
+					response.data == [] ||
+					response.data == undefined ||
+					response.data == null
+				) {
+					return alert("NO DATA LOADED YET!!");
+				}
+				{
+					this.setState({
+						calcium: response.data[0].calcium,
+						carbohydrt: response.data[0].carbohydrt,
+						cholestrl: response.data[0].cholestrl,
+						energ_kcal: response.data[0].energ_kcal,
+						iron: response.data[0].iron,
+						magnesium: response.data[0].magnesium,
+						manganese: response.data[0].manganese,
+						phosphorus: response.data[0].phosphorus,
+						potassium: response.data[0].potassium,
+						protein: response.data[0].protein,
+						sodium: response.data[0].sodium,
+						vit_b6: response.data[0].vit_b6,
+						vit_b12: response.data[0].vit_b12,
+						vit_c: response.data[0].vit_c,
+						vit_d: response.data[0].vit_d,
+						vit_e: response.data[0].vit_e,
+						vit_k: response.data[0].vit_k,
+						vit_a_iu: response.data[0].vit_a_iu,
+						water: response.data[0].water
+					});
+				}
+			})
+			.catch(error => {
+				console.log("error occuried try again by clicking the button again ");
+				{
+					this.renderErrors();
+				}
+			});
+	}
+
+	renderDetails() {
+		if (!this.props.plan) {
+			return <div>Loading</div>;
+		}
+		var {
+			Age,
+			Weight,
+			Height,
+			Name,
+			Sex,
+			Plan,
+			waist,
+			hip
+		} = this.props.plan;
+		Age=this.props.plan.Age;
+		Weight=this.props.plan.Weight;
+		Height=this.props.plan.Height;
+		Name=this.props.plan.Name;
+		Sex=this.props.plan.Sex;
+		waist=this.props.plan.waist;
+		hip=this.props.plan.hip;
+
+		{
+			const bmi = bodyMassIndex(`${Weight} kg`, `${Height} cm`);
+
+			var typeOfPerson = "";
+			var diseaseRisk = "";
+			var placeForExercise = "inside";
+			console.log(waist, "////", Sex);
+			if (bmi < 18.5) {
+				typeOfPerson = "Underweight";
+				diseaseRisk = "No Risk ";
+			}
+			if (bmi > 18.5 && bmi < 24.9) {
+				typeOfPerson = "Normal";
+				diseaseRisk = "No Risk";
+			}
+			if (bmi > 25.0 && bmi < 29.9) {
+				typeOfPerson = "Overweight";
+				if ((Sex == "m" && waist <= 40) || (Sex == "f" && waist <= 35)) {
+					diseaseRisk = "Increased";
+				}
+				if ((Sex == "m" && waist >= 40) || (Sex == "f" && waist >= 35)) {
+					diseaseRisk = "High";
+				}
+			}
+			if (bmi > 30.0 && bmi < 34.9) {
+				typeOfPerson = "Obesity class I";
+				if ((Sex == "m" && waist <= 40) || (Sex == "f" && waist <= 35)) {
+					diseaseRisk = "high";
+				}
+				if ((Sex == "m" && waist >= 40) || (Sex == "f" && waist >= 35)) {
+					diseaseRisk = "Very high";
+				}
+			}
+			if (bmi > 35.0 && bmi < 39.9) {
+				typeOfPerson = "Obesity class II";
+				if ((Sex == "m" && waist <= 40) || (Sex == "f" && waist <= 35)) {
+					diseaseRisk = "very High";
+				}
+				if ((Sex == "m" && waist >= 40) || (Sex == "f" && waist >= 35)) {
+					diseaseRisk = "very high";
+				}
+			}
+			if (bmi > 40) {
+				typeOfPerson = "Extreme Obesity";
+				if (
+					({ Sex } == "m" && { waist } <= 40) ||
+					({ Sex } == "f" && { waist } <= 35)
+				) {
+					diseaseRisk = "Extreme High";
+				}
+				if (
+					({ Sex } == "m" && { waist } <= 40) ||
+					({ Sex } == "f" && { waist } <= 35)
+				) {
+					diseaseRisk = "Extreme High";
+				}
+			}
+			this.setState({typeOfPerson:typeOfPerson})
+			return (
+				<div className='ui segments'>
+					<div className='ui segment'>
+						<p>Plan:{Plan}</p>
+					</div>
+					<div className='ui red segment'>
+						<p>Name:{Name}</p>
+					</div>
+					<div className='ui blue segment'>
+						<p>Age(in yrs):{Age}</p>
+					</div>
+					<div className='ui green segment'>
+						<p>Weight(in KG):{Weight}</p>
+					</div>
+					<div className='ui yellow segment'>
+						<p> Height(in cm):{Height}</p>
+					</div>
+					<div className='ui yellow segment'>
+						<p> Waist(in cm): {waist}</p>
+					</div>
+					<div className='ui yellow segment'>
+						<p>Hip(in cm):{hip}</p>
+					</div>
+					<div className='ui yellow segment'>
+						<p>gender: {Sex}</p>
+					</div>
+					<div className='ui blue segment'>
+						<p>BMI: {bmi}</p>
+					</div>
+					<div className='ui blue segment'>
+						<p>According to BMI: {typeOfPerson}</p>
+					</div>
+					<div className='ui blue segment'>
+						<p>
+							Disease Risk (like type 2 diabetes,hypertension,CVD):{" "}
+							{diseaseRisk}
+						</p>
+					</div>
+				</div>
+			);
+		}
+	}
+	renderFoodDetails() {
+		if (this.state.calcium === 0 || this.state.calcium === undefined) {
+			return (
+				<div className='ui blue segment'>
+					Searched Result Will Appear here !!
+				</div>
+			);
+		}
+
+		{
+			return (
+				<div className='ui segments'>
+					<div className='ui segment'>
+						<p>calcium:{this.state.calcium}</p>
+					</div>
+					<div className='ui red segment'>
+						<p>carbohydrt:{this.state.carbohydrt}</p>
+					</div>
+					<div className='ui blue segment'>
+						<p>cholestrl:{this.state.cholestrl}</p>
+					</div>
+					<div className='ui green segment'>
+						<p>energy kcal:{this.state.energ_kcal}</p>
+					</div>
+					<div className='ui yellow segment'>
+						<p> iron:{this.state.iron}</p>
+					</div>
+					<div className='ui yellow segment'>
+						<p> magnesium: {this.state.magnesium}</p>
+					</div>
+					<div className='ui yellow segment'>
+						<p>manganese:{this.state.manganese}</p>
+					</div>
+					<div className='ui yellow segment'>
+						<p>phosphorus: {this.state.phosphorus}</p>
+					</div>
+					<div className='ui red segment'>
+						<p>potassium:{this.state.potassium}</p>
+					</div>
+					<div className='ui blue segment'>
+						<p>protein:{this.state.protein}</p>
+					</div>
+					<div className='ui green segment'>
+						<p>sodium:{this.state.sodium}</p>
+					</div>
+					<div className='ui yellow segment'>
+						<p> vit_a_iu:{this.state.vit_a_iu}</p>
+					</div>
+					<div className='ui yellow segment'>
+						<p> vit_b6: {this.state.vit_b6}</p>
+					</div>
+					<div className='ui yellow segment'>
+						<p>vit_b12:{this.state.vit_b12}</p>
+					</div>
+					<div className='ui yellow segment'>
+						<p>vit_c: {this.state.vit_c}</p>
+					</div>
+					<div className='ui red segment'>
+						<p>vit_d:{this.state.vit_d}</p>
+					</div>
+					<div className='ui blue segment'>
+						<p>vit_e:{this.state.vit_e}</p>
+					</div>
+					<div className='ui green segment'>
+						<p>vit_k:{this.state.vit_k}</p>
+					</div>
+					<div className='ui yellow segment'>
+						<p> water:{this.state.water}</p>
+					</div>
+				</div>
+			);
+		}
+	}
+	onTermSubmit = async term => {
+		const response = await axios.get(
+			"https://www.googleapis.com/youtube/v3/search",
+			{
+				params: {
+					part: "snippet",
+					maxResults: 5,
+					key: "AIzaSyAvy_kUcXCAnciFGDeNUp977UOju6gfWJ",
+					q: term
+				}
+			}
+		);
+		this.setState({
+			videos: response.data.items,
+			selectedVideo: response.data.items[0]
+		});
+	};
+	onVideoSelect = video => {
+		this.setState({ selectedVideo: video });
+	};
+
+	render() {
+		if (!this.props.plan) {
+			return <div>Loading</div>;
+		}
+		return (
+			<div className='ui form'>
+				{this.renderDetails()}
+				<div className='field'>
+					<label className='ui text'>
+						Search Nutrition and Vitamins Value of Food and Fruits
+					</label>
+					<input style={{ width: 900 }} type='text' id='input'></input>
+				</div>
+				<div className='field'>
+					<label className='ui text'>
+						Place for Exercise (inside or outside)
+					</label>
+					<input style={{ width: 900 }} type='text' id='input2'></input>
+				</div>
+				<button
+					className='ui  button primary'
+					onClick={() => {
+						this.setState({
+							inputfoodvalue: document.getElementById("input").value,
+							placeForExercise:
+								document.getElementById("input2").value || "inside"
+						});
+						{
+							this.getFoodDetails();
+						}
+					}}
+				>
+					Submit
+				</button>
+				{this.renderFoodDetails()}
+				<div className='ui container ' style={{ marginTop: "10px " }}>
+					<SearchBar onFormSubmit={this.onTermSubmit} />
+					<div className='ui grid'>
+						<div className=' ui row'>
+							<div className='eleven wide column'>
+								<VideoDetails video={this.state.selectedVideo} />
+							</div>
+							<div className='five wide column'>
+								<VideoList
+									onVideoSelect={this.onVideoSelect}
+									videos={this.state.videos}
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		);
+	}
+}
+const mapStateToProps = (state, ownProps) => {
+	return {
+		plan: state.plans[ownProps.match.params.id]
+	};
+};
+export default connect(
+	mapStateToProps,
+	{ fetchplan }
+)(PlanShow);

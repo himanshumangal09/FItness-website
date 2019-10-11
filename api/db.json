@@ -1,0 +1,34 @@
+{
+  "plans": [
+    {
+      "Age": "14",
+      "Weight": "50",
+      "Sex": "male",
+      "Height": "140",
+      "Name": "harsh",
+      "Plan": "basic",
+      "id": 1
+    },
+    {
+      "Age": "19",
+      "Weight": "80",
+      "Sex": "male",
+      "Height": "165",
+      "Name": "himanshu has refactored the stream",
+      "Plan": "basic",
+      "id": 2
+    },
+    {
+      "Weight": "50",
+      "Sex": "m",
+      "Height": "170",
+      "Name": "himanshu",
+      "Plan": "basic",
+      "Age": "19",
+      "userId": "117314479662061327305",
+      "id": 3,
+      "waist": "43",
+      "hip": "30"
+    }
+  ]
+}
