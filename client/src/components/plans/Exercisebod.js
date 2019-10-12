@@ -80,7 +80,7 @@ class Exercisebod extends React.Component {
 					<div>
 						<div>exercise 25</div>
 						<div>exercise 26</div>
-						<div>exercise 2</div>
+						<div>exercise 27</div>
 					</div>
 				);
 			}
