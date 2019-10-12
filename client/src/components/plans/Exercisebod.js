@@ -57,7 +57,7 @@ class Exercisebod extends React.Component {
 					</div>
 				);
 			}
-			if (typeOfPerson == "Underweight" && (Age > 15 || Age < 22)) {
+			if (&& (Age > 15 || Age < 22)) {
 				return (
 					<div>
 						<div>exercise 1</div>
@@ -66,7 +66,7 @@ class Exercisebod extends React.Component {
 					</div>
 				);
 			}
-			if (typeOfPerson == "Underweight" && (Age > 15 || Age < 22)) {
+			if (&& (Age > 15 || Age < 22)) {
 				return (
 					<div>
 						<div>exercise 1</div>
@@ -75,7 +75,7 @@ class Exercisebod extends React.Component {
 					</div>
 				);
 			}
-			if (typeOfPerson == "Underweight" && (Age > 15 || Age < 22)) {
+			if (&& (Age > 15 || Age < 22)) {
 				return (
 					<div>
 						<div>exercise 1</div>
