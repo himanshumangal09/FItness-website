@@ -66,7 +66,7 @@ class Exercisebod extends React.Component {
 					</div>
 				);
 			}
-			if (	typeOfPerson = "Overweight"&& (Age > 22 || Age < 2)) {
+			if (	typeOfPerson = "Overweight"&& (Age > 22 || Age < )) {
 				return (
 					<div>
 						<div>exercise 1</div>
