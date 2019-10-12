@@ -2,7 +2,7 @@ import React from "react";
 class Exercisebod extends React.Component {
     exerciseBasedOnDetails() {
         const {typeOfPerson,Age}=this.props;
-        if(typeOfPerson!=undefined&&this.Age!=undefined)
+        if(typeOfPerson!=undefined&&thisAge!=undefined)
         {
             if(typeOfPerson="Underweight" && (Age>15||Age<22))
             {
