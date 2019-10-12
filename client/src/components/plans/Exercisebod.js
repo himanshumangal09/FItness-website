@@ -13,7 +13,9 @@ class Exercisebod extends React.Component {
                                 <div>
                                 exercise 1
                            </div>
-                           
+                                           <div>
+                                           exercise 1
+                                      </div>
                 )   
             }
         }
