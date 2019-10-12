@@ -79,7 +79,7 @@ class Exercisebod extends React.Component {
 				return (
 					<div>
 						<div>exercise 25</div>
-						<div>exercise 2</div>
+						<div>exercise 26</div>
 						<div>exercise 3</div>
 					</div>
 				);
