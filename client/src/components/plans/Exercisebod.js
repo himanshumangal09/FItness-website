@@ -30,7 +30,7 @@ class Exercisebod extends React.Component {
 					</div>
 				);
 			}
-			if (&& (Age > 15 || Age < 22)) {
+			if (typeOfPerson = "Normal";&& (Age > 15 || Age < 22)) {
 				return (
 					<div>
 						<div>exercise 1</div>
@@ -39,7 +39,7 @@ class Exercisebod extends React.Component {
 					</div>
 				);
 			}
-			if (&& (Age > 15 || Age < 22)) {
+			if (typeOfPerson = "Normal";&& (Age > 15 || Age < 22)) {
 				return (
 					<div>
 						<div>exercise 1</div>
@@ -48,7 +48,7 @@ class Exercisebod extends React.Component {
 					</div>
 				);
 			}
-			if (&& (Age > 15 || Age < 22)) {
+			if (typeOfPerson = "Normal";&& (Age > 15 || Age < 22)) {
 				return (
 					<div>
 						<div>exercise 1</div>
