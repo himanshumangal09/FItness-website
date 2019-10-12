@@ -42,7 +42,7 @@ class Exercisebod extends React.Component {
 			if (typeOfPerson = "Normal"&& (Age > 22|| Age < 30)) {
 				return (
 					<div>
-						<div>exercise 1</div>
+						<div>exercise 13</div>
 						<div>exercise 2</div>
 						<div>exercise 3</div>
 					</div>
