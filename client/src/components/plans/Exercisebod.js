@@ -17,7 +17,7 @@ class Exercisebod extends React.Component {
 
 	render() {
 		console.log(this.props);
-		return <div>{this.e}</div>;
+		return <div>{this.ex}</div>;
 	}
 }
 export default Exercisebod;
