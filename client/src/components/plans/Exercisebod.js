@@ -4,7 +4,9 @@ class Exercisebod extends React.Component {
         if(this.props.typeOfPerson!=undefined&&this.props.Age!=undefined)
         {
             if()
-            
+            {
+                
+            }
         }
     }
     
