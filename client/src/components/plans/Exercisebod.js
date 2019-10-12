@@ -3,9 +3,9 @@ class Exercisebod extends React.Component {
     exerciseBasedOnDetails() {
         if(this.props.typeOfPerson!=undefined&&this.props.Age!=undefined)
         {
-            if()
+            if(ty)
             {
-                
+
             }
         }
     }
