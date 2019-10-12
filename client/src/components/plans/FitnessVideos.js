@@ -9,26 +9,6 @@ class FitnessVideos extends React.Component {
 		this.onTermSubmit("buildings");
 	}
 	state = { videos: [], selectedVideo: null };
-	onTermSubmit = async term => {
-		const response = await axios.get(
-			"https://www.googleapis.com/youtube/v3/search",
-			{
-				params: {
-					part: "snippet",
-					maxResults: 5,
-					key: "AIzaSyCXo2H_4a5FIdVlHiUsVID0zhwKuU0u06Q",
-					q: term
-				}
-			}
-		);
-		this.setState({
-			videos: response.data.items,
-			selectedVideo: response.data.items[0]
-		});
-	};
-	onVideoSelect = video => {
-		this.setState({ selectedVideo: video });
-	};
 	// onTermSubmit = async term => {
 	// 	const response = await axios.get(
 	// 		"https://www.googleapis.com/youtube/v3/search",
@@ -36,7 +16,7 @@ class FitnessVideos extends React.Component {
 	// 			params: {
 	// 				part: "snippet",
 	// 				maxResults: 5,
-	// 				key: "AIzaSyAvy_kUcXCAnciFGDeNUp977UOju6gfWJo",
+	// 				key: "AIzaSyCXo2H_4a5FIdVlHiUsVID0zhwKuU0u06Q",
 	// 				q: term
 	// 			}
 	// 		}
@@ -49,6 +29,26 @@ class FitnessVideos extends React.Component {
 	// onVideoSelect = video => {
 	// 	this.setState({ selectedVideo: video });
 	// };
+	onTermSubmit = async term => {
+		const response = await axios.get(
+			"https://www.googleapis.com/youtube/v3/search",
+			{
+				params: {
+					part: "snippet",
+					maxResults: 5,
+					key: "AIzaSyAvy_kUcXCAnciFGDeNUp977UOju6gfWJo",
+					q: term
+				}
+			}
+		);
+		this.setState({
+			videos: response.data.items,
+			selectedVideo: response.data.items[0]
+		});
+	};
+	onVideoSelect = video => {
+		this.setState({ selectedVideo: video });
+	};
 
 	render() {
 		return (
